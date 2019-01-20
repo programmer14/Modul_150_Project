@@ -1,0 +1,48 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-card fxFlex="50">
+    <mat-card-content>
+      <form class="example-form" fxLayout="column">
+        <mat-form-field fxFlex="100" required>
+          <input matInput type="email" placeholder="E-Mail Adresse">
+        </mat-form-field>
+        <mat-form-field fxFlex="100">
+          <select matNativeControl required>
+            <option value="Herr">Herr</option>
+            <option value="Frau">Frau</option>
+          </select>
+        </mat-form-field>
+        <mat-form-field fxFlex="100" required>
+          <input matInput placeholder="Name">
+        </mat-form-field>
+        <mat-form-field fxFlex="100" required>
+          <input matInput placeholder="Vorname">
+        </mat-form-field>
+        <mat-form-field fxFlex="100" required>
+          <input matInput placeholder="Strasse">
+        </mat-form-field>
+        <div fxLayout="row" fxLayoutGap="20px">
+          <mat-form-field fxFlex="20" required>
+            <input matInput placeholder="Postleitzahl">
+          </mat-form-field>
+          <mat-form-field fxFlex="80" required>
+            <input matInput placeholder="Ort">
+          </mat-form-field>
+        </div>
+        <mat-form-field fxFlex="100" required>
+            <input matInput type="password" placeholder="Passwort">
+          </mat-form-field>
+          <mat-form-field fxFlex="100" required>
+              <input matInput type="password" placeholder="Passwort wiederholen">
+            </mat-form-field>
+            <mat-checkbox required>Ich aktzeptiere die <a (click)="AGB()">AGB</a>!</mat-checkbox>
+      </form>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button (click)="register()">
+        Registrieren
+      </button>
+      <span class="fill-remaining-space"></span>
+
+    </mat-card-actions>
+  </mat-card>
+</div>

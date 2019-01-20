@@ -1,0 +1,25 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-card fxFlex="50">
+    <mat-card-content>
+      <form class="example-form" fxLayout="column">
+        <mat-form-field fxFlex="100">
+          <input matInput placeholder="Email">
+        </mat-form-field>
+        <mat-form-field fxFlex="100">
+          <input matInput placeholder="Passwort">
+        </mat-form-field>
+
+      </form>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button>
+        Login
+      </button>
+      <span class="fill-remaining-space"></span>
+      <button mat-raised-button routerLink="/register">
+        Registrierung
+      </button>
+
+    </mat-card-actions>
+  </mat-card>
+</div>

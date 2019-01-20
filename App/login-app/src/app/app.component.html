@@ -1,8 +1,8 @@
-<mat-toolbar fxLayout="row" fxLayoutAlign="start center">
-    <mat-icon>home</mat-icon>Bilder-Haus
+<mat-toolbar >
+    <div routerLink="/home" fxLayout="row" fxLayoutAlign="start center"><mat-icon>home</mat-icon>Bilder-Haus</div>
   <!-- This fills the remaining space of the current row -->
   <span class="fill-remaining-space"></span>
 
-  <button mat-raised-button color="primary">Login</button>
+  <button mat-raised-button color="primary" routerLink="/login">Login</button>
 </mat-toolbar>
 <router-outlet></router-outlet>

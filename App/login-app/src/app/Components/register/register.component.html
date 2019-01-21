@@ -1,44 +1,41 @@
 <div fxLayout="row" fxLayoutAlign="center center">
   <mat-card fxFlex="50">
     <mat-card-content>
-      <form class="example-form" fxLayout="column">
-        <mat-form-field fxFlex="100" required>
-          <input matInput type="email" placeholder="E-Mail Adresse">
+      <form class="example-form" fxLayout="column" #registerForm="ngForm">
+        <mat-form-field fxFlex="100" >
+          <input matInput required name="email" type="email" placeholder="E-Mail Adresse" [(ngModel)]="registerObject.Email">
         </mat-form-field>
         <mat-form-field fxFlex="100">
-          <select matNativeControl required>
+          <select matNativeControl required placeholder="Anrede" name="anrede" [(ngModel)]="registerObject.Anrede">
             <option value="Herr">Herr</option>
             <option value="Frau">Frau</option>
           </select>
         </mat-form-field>
-        <mat-form-field fxFlex="100" required>
-          <input matInput placeholder="Name">
+        <mat-form-field fxFlex="100" >
+          <input matInput placeholder="Name" name="name" [(ngModel)]="registerObject.Name" required> 
         </mat-form-field>
-        <mat-form-field fxFlex="100" required>
-          <input matInput placeholder="Vorname">
+        <mat-form-field fxFlex="100" >
+          <input matInput placeholder="Vorname" name="vorname" [(ngModel)]="registerObject.Vorname" required>
         </mat-form-field>
-        <mat-form-field fxFlex="100" required>
-          <input matInput placeholder="Strasse">
+        <mat-form-field fxFlex="100" >
+          <input matInput required placeholder="Strasse" name="strasse" [(ngModel)]="registerObject.Strasse">
         </mat-form-field>
         <div fxLayout="row" fxLayoutGap="20px">
-          <mat-form-field fxFlex="20" required>
-            <input matInput placeholder="Postleitzahl">
+          <mat-form-field fxFlex="20" >
+            <input matInput required placeholder="Postleitzahl" name="Postleitzahl" [(ngModel)]="registerObject.Postleitzahl">
           </mat-form-field>
-          <mat-form-field fxFlex="80" required>
-            <input matInput placeholder="Ort">
+          <mat-form-field fxFlex="80" >
+            <input matInput required placeholder="Ort" name="ort" [(ngModel)]="register.Ort">
           </mat-form-field>
         </div>
-        <mat-form-field fxFlex="100" required>
-            <input matInput type="password" placeholder="Passwort">
+        <mat-form-field fxFlex="100">
+            <input matInput required type="password" placeholder="Passwort" name="passwort" [(ngModel)]="registerObject.Passwort">
           </mat-form-field>
-          <mat-form-field fxFlex="100" required>
-              <input matInput type="password" placeholder="Passwort wiederholen">
-            </mat-form-field>
-            <mat-checkbox required>Ich aktzeptiere die <a (click)="AGB()">AGB</a>!</mat-checkbox>
+            <mat-checkbox required name="agb" id="agb" #ch>Ich aktzeptiere die <a (click)="AGB()">AGB</a>!</mat-checkbox>
       </form>
     </mat-card-content>
     <mat-card-actions align="end">
-      <button mat-raised-button (click)="register()">
+      <button mat-raised-button (click)="register()" [disabled]="!registerForm.valid || !ch.checked">
         Registrieren
       </button>
       <span class="fill-remaining-space"></span>

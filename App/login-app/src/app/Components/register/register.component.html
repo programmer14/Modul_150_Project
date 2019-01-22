@@ -1,5 +1,5 @@
 <div fxLayout="row" fxLayoutAlign="center center">
-  <mat-card fxFlex="50">
+  <mat-card fxFlex="25">
     <mat-card-content>
       <form class="example-form" fxLayout="column" #registerForm="ngForm">
         <mat-form-field fxFlex="100" >
@@ -22,10 +22,10 @@
         </mat-form-field>
         <div fxLayout="row" fxLayoutGap="20px">
           <mat-form-field fxFlex="20" >
-            <input matInput required placeholder="Postleitzahl" name="Postleitzahl" [(ngModel)]="registerObject.Postleitzahl">
+            <input matInput required type="number"  placeholder="Postleitzahl" name="Postleitzahl" [(ngModel)]="registerObject.Postleitzahl">
           </mat-form-field>
           <mat-form-field fxFlex="80" >
-            <input matInput required placeholder="Ort" name="ort" [(ngModel)]="register.Ort">
+            <input matInput required placeholder="Ort" name="ort" [(ngModel)]="registerObject.Ort">
           </mat-form-field>
         </div>
         <mat-form-field fxFlex="100">

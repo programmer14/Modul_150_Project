@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatToolbarModule, MatButtonModule, MatCardModule, MatIconModule, MatInputModule, MatSelectModule, MatCheckboxModule, MatDialogModule} from '@angular/material';
+import {MatToolbarModule, MatButtonModule, MatCardModule, MatIconModule, MatInputModule, MatSelectModule, MatCheckboxModule, MatDialogModule, MatSnackBarModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -11,13 +11,19 @@ import { RegisterComponent } from './Components/register/register.component';
 import { AgbDialogComponent } from './Components/agb-dialog/agb-dialog.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ErrorDialogComponent } from './Components/error-dialog/error-dialog.component';
+import { VerifiyEmailComponent } from './Components/verifiy-email/verifiy-email.component';
+import { UserInfoHubComponent } from './Components/user-info-hub/user-info-hub.component';
 @NgModule({
   declarations: [
     AppComponent,
     PicturesComponent,
     LoginComponent,
     RegisterComponent,
-    AgbDialogComponent
+    AgbDialogComponent,
+    ErrorDialogComponent,
+    VerifiyEmailComponent,
+    UserInfoHubComponent
   ],
   imports: [
     BrowserModule,
@@ -33,10 +39,11 @@ import { FormsModule } from '@angular/forms';
     MatCheckboxModule,
     MatDialogModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AgbDialogComponent]
+  entryComponents: [AgbDialogComponent, ErrorDialogComponent]
 })
 export class AppModule { }

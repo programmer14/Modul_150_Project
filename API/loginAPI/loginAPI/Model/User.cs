@@ -17,7 +17,8 @@ namespace loginAPI.Model
         public string Ort { get; set; }
         public string Passwort { get; set; }
         public string UserSessionToken { get; set; }
-        public string UserSessionTokenCreated { get; set; }
+        public DateTime UserSessionTokenCreated { get; set; }
         public string UserEmailToken { get; set; }
+        public bool UserEmailVerified { get; set; }
     }
 }
